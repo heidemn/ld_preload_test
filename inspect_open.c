@@ -6,6 +6,7 @@ typedef int (*orig_open_f_type)(const char *pathname, int flags);
  
 int open(const char *pathname, int flags, ...)
 {
+    // add custom code here...
     printf("*** OPEN *** %s\n", pathname ? pathname : "(NULL)");
 
     orig_open_f_type orig_open;
